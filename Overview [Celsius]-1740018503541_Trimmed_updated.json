@@ -1,0 +1,210 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Weather dashboard with units in °C",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": 17,
+  "links": [
+    {
+      "tags": [
+        "weather",
+        "demo"
+      ],
+      "type": "dashboards"
+    }
+  ],
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 10,
+        "x": 14,
+        "y": 0
+      },
+      "id": 16,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "---",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.6.0-82840",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 41,
+  "tags": [
+    "weather",
+    "demo"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "grafanacloud-demoinfra-prom",
+          "value": "grafanacloud-demoinfra-prom"
+        },
+        "hide": 2,
+        "name": "DS_PROMETHEUS",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "/demoinfra/",
+        "type": "datasource"
+      },
+      {
+        "current": {
+          "text": "grafanacloud-demoinfra-logs",
+          "value": "grafanacloud-demoinfra-logs"
+        },
+        "hide": 2,
+        "name": "DS_LOKI",
+        "options": [],
+        "query": "loki",
+        "refresh": 1,
+        "regex": "/demoinfra-logs/",
+        "type": "datasource"
+      },
+      {
+        "current": {
+          "text": [
+            "London"
+          ],
+          "value": [
+            "London"
+          ]
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
+        "label": "Location",
+        "multi": true,
+        "name": "location",
+        "options": [
+          {
+            "selected": true,
+            "text": "London",
+            "value": "London"
+          },
+          {
+            "selected": false,
+            "text": "New_Delhi",
+            "value": "New_Delhi"
+          },
+          {
+            "selected": false,
+            "text": "New_York",
+            "value": "New_York"
+          },
+          {
+            "selected": false,
+            "text": "Paris",
+            "value": "Paris"
+          },
+          {
+            "selected": false,
+            "text": "San_Francisco",
+            "value": "San_Francisco"
+          },
+          {
+            "selected": false,
+            "text": "Singapore",
+            "value": "Singapore"
+          },
+          {
+            "selected": false,
+            "text": "Sydney",
+            "value": "Sydney"
+          },
+          {
+            "selected": false,
+            "text": "Tokyo",
+            "value": "Tokyo"
+          },
+          {
+            "selected": false,
+            "text": "Toronto",
+            "value": "Toronto"
+          },
+          {
+            "selected": false,
+            "text": "Vienna",
+            "value": "Vienna"
+          }
+        ],
+        "query": "label_values(location)",
+        "type": "query"
+      },
+      {
+        "current": {
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
+        "hide": 2,
+        "includeAll": true,
+        "label": "Forecast Days",
+        "multi": true,
+        "name": "forecast_day",
+        "options": [
+          {
+            "selected": false,
+            "text": "1",
+            "value": "1"
+          },
+          {
+            "selected": false,
+            "text": "2",
+            "value": "2"
+          }
+        ],
+        "query": "label_values(forecast_day)",
+        "regex": "[^0]",
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "utc",
+  "title": "Overview [Celsius]",
+  "uid": "c1385932-e8b5-481e-a999-f716359f8cf2",
+  "version": 2,
+  "weekStart": ""
+}
