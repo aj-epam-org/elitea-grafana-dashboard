@@ -1,56 +1,41 @@
 {
-    "dashboard": {
-        "annotations": {
-            "list": [
-                {
-                    "builtIn": 1,
-                    "datasource": {
-                        "type": "grafana",
-                        "uid": "-- Grafana --"
-                    },
-                    "enable": true,
-                    "hide": true,
-                    "iconColor": "rgba(0, 211, 255, 1)",
-                    "name": "Annotations & Alerts",
-                    "type": "dashboard"
-                }
-            ]
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
         },
-        "editable": true,
-        "fiscalYearStartMonth": 0,
-        "graphTooltip": 0,
-        "id": 21,
-        "links": [],
-        "panels": [],
-        "preload": false,
-        "refresh": "5s",
-        "schemaVersion": 41,
-        "tags": [],
-        "templating": {
-            "list": []
-        },
-        "time": {
-            "from": "now-6h",
-            "to": "now"
-        },
-        "timepicker": {},
-        "timezone": "",
-        "title": "my dashboard 3",
-        "uid": "cedpkcfucslj4d",
-        "version": 1,
-        "weekStart": ""
-    },
-    "folderId": 0,
-    "folderUid": null,
-    "inputs": [
-        {
-            "name": null,
-            "pluginId": null,
-            "type": null,
-            "value": null
-        }
-    ],
-    "overwrite": true,
-    "path": null,
-    "pluginId": null
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 21,
+  "links": [],
+  "panels": [],
+  "preload": false,
+  "refresh": "5s",
+  "schemaVersion": 41,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "my dashboard",
+  "uid": "cedpkcfucslj4d",
+  "version": 1,
+  "weekStart": ""
 }
